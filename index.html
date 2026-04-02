@@ -4,12 +4,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>BookStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script:wght@600&family=Kanit&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="path/to/fork-awesome/css/fork-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 
 <body>
+
     <div id="container">
 
         <!-- Hình Banner hoặc Logo  -->
@@ -42,7 +47,7 @@
                     </li>
                     <li class="devider">&nbsp;</li>
                     <li>
-                        <a href="#"><img src="images/layout/user_add.png" /> ĐĂNG NHẬP</a>
+                        <a href="#" ><img src="images/layout/user_add.png" /> ĐĂNG NHẬP</a>
                     </li>
                 </ul>
             </div>
@@ -78,105 +83,98 @@
                         <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Ngoại Ngữ</a>
                     </li>
                 </ul>
-                <div class="box">
-                    <div class="title">SP Khuyến mãi</div>
-                    <div class="box_content" style="height:190px;">
-                    <!-- Chèn thẻ marquee chạy các sp khuyến mãi ở đây -->
-                        <marquee direction="up" scrollamount="5" height="190">
-
-                            <!-- SP 1 -->
-                            <table width="100%" style="text-align:center; margin-bottom:10px;">
-                                <tr>
-                                    <td colspan="2" style="color:red; font-weight:bold;">
-                                        Hoa Namiya (2018)
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <img src="images/Sach_2.jpg" width="100%">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="color:red;">63.000</td>
-                                    <td style="text-decoration: line-through; color:gray;">105.000</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">Sách bán chạy</td>
-                                </tr>
-                            </table>
-                            <hr style="border: 1px solid #b90505;">
-                            <!-- SP 2 -->
-                            <table width="100%" style="text-align:center; margin-bottom:10px;">
-                                <tr>
-                                    <td colspan="2" style="color:red; font-weight:bold;">
-                                        Goth - Hắc Ám
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <img src="images/Sach_3.jpg" width="100%">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="color:red;">50.000</td>
-                                    <td style="text-decoration: line-through; color:gray;">90.000</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">Tiểu thuyết nổi tiếng</td>
-                                </tr>
-                            </table>
-
-                        </marquee>
-                    </div>
                 </div>
-
-                </div>
-        </div>
+            </div>
 
             <!-- CONTENT hiển thị ở giữa  -->
             <div id="content">
-                <div class="big_box" style="align-content: center;">
-                    <div class="big_box_top"></div>
-                    <div class="big_box_mid">
-                        <table>
-                            <tr class="row">
-                                <td class="col">&nbsp;</td>
-                                <th class="col"><h2>Sản Phẩm mới</h2></th>
-                                <td class="col">&nbsp;</td>
-                            </tr>
-                            <tr class="row">
-                                <th style="color: red;" class="col"><strong>Quản trị kinh doanh</strong></th>
-                                <th style="color: red;" class="col"><strong>Tăng lương</strong></th>
-                                <th style="color: red;" class="col"><strong>Khởi nghiệp</strong></th>
-                            </tr>
-                            <tr class="row">
-                                <th class="col"><img src="images/Book_table_1.jpg" width="175"/></th>
-                                <th class="col"><img src="images/Book_table_2.png" width="175"/></th>
-                                <th class="col"><img src="images/Book_table_3.png" width="175"/></th>
-                            </tr>
-                            <table width="100%">
-                                <tr class="row">
-                                    <th style="color: red;" class="col">450.000đ</th>
-                                    <td class="col"><img src="images/layout/cart.gif"/>Đặt mua</td>
-                                    <th style="color: red;" class="col">125.000đ</th>
-                                    <td class="col"><img src="images/layout/cart.gif"/>Đặt mua</td>
-                                    <th style="color: red;" class="col">151.000đ</th>
-                                    <td class="col"><img src="images/layout/cart.gif"/>Đặt mua</td>
+                <form name="frmthemsanpham" action="../xl_lab03_bai3.php" method="post" enctype="multipart/form-data">
+                    <table border="0" width="100%" style="margin-top: 20px;">
+                    <tr>
+                    <td style="font-weight: bold;" colspan="2" align="center"><em>THÊM SẢN PHẨM MỚI</em></td></tr>
+                    
+                    
+                    <tr><td>Mã sản phẩm</td>
+                       <td><input type="text" name="nmProID" size="30"/></td>
+                    </tr>
+                    <tr><td>Tên sản phẩm</td>
+                       <td><input type="text" name="nmProName" size="30"/></td>
+                    </tr>
+                    <tr><td>Hình ảnh</td>
+                      <td><input type="file" name="nmProImg" /></td>
+                    </tr>
+                    <tr><td>Hãng sản xuất</td>
+                       <td>
+                        <select name="nmMan">
+                            <option value="Thiên Long">Thiên Long</option>
+                            <option value="Thiên Long 1">Thiên Long 1</option>
+                            <option value="Thiên Long 2">Thiên Long 2</option>
+                     </td>
+                    </tr>
+                    <tr><td>Kích thước</td>
+                       <td>
+                        W:<input type="text" name="nmWidth" size="30"  />
+                        H:<input type="text" name="nmHeight" size="30"  />
+                    </td>
+                    </tr>
+                    <tr><td>Số trang</td>
+                        <td>
+                            <input type="text" name="nmCount" size="30"  />
+                        </td>
+                     </tr>
+                    <tr><td>Tác giả</td>
+                      <td>
+                        <input type="text" name="nmTacGia" size="30"  />
+                    </td>
+                    </tr>
+                    <tr><td>Giá</td>	
+                      <td>
+                        <input type="text" name="nmPrice" size="30"  />
+                        Màu: <input type="color" name="nmColor">
+                    </td>
+                    </tr>
+                    <tr><td>Xuất xứ</td>
+                       <td><input type="tel" name="nmLive" size="50"/></td>
+                    </tr>
+                        <td>Thể loại</td>
+                        <td>
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td>
+                                    <input type="checkbox" name="nmFunctions[]" value="Van_Hoc"/> Văn học <br>
+                                    <input type="checkbox" name="nmFunctions[]" value="Kinh_Te"/> Kinh tế <br>
+                                    <input type="checkbox" name="nmFunctions[]" value="Tam_Ly"/> Tâm lý<br>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="nmFunctions[]" value="Thieu_nhi"/> Thiếu nhi<br>
+                                    <input type="checkbox" name="nmFunctions[]" value="Giao_Khoa"/> Giáo khoa<br>
+                                    <input type="checkbox" name="nmFunctions[]" value="Ngoai_ngu"/> Ngoại ngữ<br>
+                                </td>
                                 </tr>
                             </table>
-                        </table>
-                    </div>
-                    <div class="big_box_bot"></div>
+                        </td>
+                        </tr>
+                        <tr><td>Mô tả chi tiết</td>
+                            <td><textarea name="nmProDet" id="" cols="40" rows="10"></textarea></td>
+                         </tr>
+                    </table>
+                    <div class="btn-group" style="text-align: center; margin-top: 10px;">
+                        <input type="submit" name="nmSubmit" value="thêm" /> 
+                        <input type="reset" name="nmReset" value="Xóa" />
+                    </div> 
+                </form>
+                    
                 </div>
             </div>
 
             <!-- MENU bên phải  -->
             <div id="right">
-                <div class="title">Hãng sản xuất</div>
+                <!-- Cần bổ sung thêm (tương tự như <div id="left"> ) -->
+                    <div class="title">Hãng sản xuất</div>
                 <ul class="categories">
 
                     <li class="lmenu1">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;CHONMUA 365</a>
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;CHON MUA 365</a>
                     </li>
                     <li class="lmenu2">
                         <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Deli</a>
@@ -194,22 +192,11 @@
                         <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;M&G</a>
                     </li>
                 </ul>
-                <div class="box">
-                    <div class="title">Quảng cáo</div>
-                    <div class="box_content" style="height:190px; text-align: center;">
-                        <img src="images/Sach_7.jpg" width="190"/>
-                    </div>
                 </div>
             </div>
-            <div style="clear:both; height:10px;"></div>
-            <div id="footer">
-                <table align="center">
-                    <tr class="row">Copyright@ cửa hàng sách tốt ABC</tr>
-                    <tr class="row"><td>Địa chỉ: 180 Cao Lỗ Phường 4 Quận 8 Tp.HCM</td></tr>
-                    <tr class="row"><td>Điện thoại: 091234567</td></tr>
-                </table>
-            </div>
 
+
+        </div>
     </div>
 </body>
 
